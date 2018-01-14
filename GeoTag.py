@@ -92,6 +92,7 @@ def main():
 				lat = hit_record["latitude"].values[0]
 				if lat < 0:
 					lat_ref = 'S' 
+					lat = lat * -1
 				else:
 					lat_ref = 'N' 
 
@@ -101,6 +102,7 @@ def main():
 				lng = hit_record["longitude"].values[0]
 				if lng < 0:
 					lng_ref = 'W'
+					lng = lng * -1
 				else:
 					lng_ref = 'E'	
 				lng_rational = degToDmsRational(lng)
